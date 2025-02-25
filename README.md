@@ -6,15 +6,16 @@ Video tutorial:
 
 [![Voice-activated micro:bit](assets/video-front-v2.jpg)](https://www.youtube.com/watch?v=fNSKWdIxh8o&feature=youtu.be)
 
-## How to build (Docker) - recommended!
+## How to build
 
-1. Build the container:
+1. Install Docker.
+2. Build the container:
 
     ```
     $ docker build -t microbit_ei_build .
     ```
 
-1. Build the project:
+3. Build the project:
 
     **macOS, Linux**
 
@@ -22,34 +23,19 @@ Video tutorial:
     $ docker run --rm -v $PWD:/app microbit_ei_build python build.py
     ```
 
-    **Windows**
+    **Windows (Command prompt)**
 
     ```
     $ docker run --rm -v "%cd%":/app microbit_ei_build python build.py
     ```
 
-
-1. And flash the binary to your micro:bit, by dragging `MICROBIT.hex` onto the `MICROBIT` disk drive.
-
-## How to build (local)
-
-1. Install [CMake](https://cmake.org), [Python 2.7](https://www.python.org) and the [GNU ARM Embedded Toolchain 9](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm). Make sure `arm-none-eabi-gcc` is in your PATH.
-
-    > **Note:** This project currently does not work with GNU ARM Embedded Toolchain 10 ([bug](https://github.com/lancaster-university/codal-microbit-v2/issues/63))!
-
-1. Clone this repository:
+    **Windows (Powershell)**
 
     ```
-    $ git clone https://github.com/edgeimpulse/voice-activated-microbit
+    $ docker run --rm -v ${PWD}$:/app microbit_ei_build python build.py
     ```
 
-1. Build the project:
-
-    ```
-    $ python build.py
-    ```
-
-1. And flash the binary to your micro:bit, by dragging `MICROBIT.hex` onto the `MICROBIT` disk drive.
+4. And flash the binary to your micro:bit, by dragging `MICROBIT.hex` onto the `MICROBIT` disk drive.
 
 ## Viewing the Machine Learning model
 
