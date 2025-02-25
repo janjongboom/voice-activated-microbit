@@ -19,13 +19,13 @@ Video tutorial:
     **macOS, Linux**
 
     ```
-    $ docker run --rm -v $PWD:/data microbit_ei_build
+    $ docker run --rm -v $PWD:/app microbit_ei_build python build.py
     ```
 
     **Windows**
 
     ```
-    $ docker run --rm -v "%cd%":/data microbit_ei_build
+    $ docker run --rm -v "%cd%":/app microbit_ei_build python build.py
     ```
 
 
